@@ -79,17 +79,27 @@ div.container {
 }
 div#viewport {
   height: 400px;
+  min-height: 400px;
   width: inherit;
+  position: relative;
 
   display: flex;
   flex-direction: row;
-  /*justify-content: center;*/
   align-content: center;
   align-items: center;
   overflow: hidden;
-  /*min-width: 100%;*/
+  box-sizing: border-box;
 }
-
+button.toggle {
+  position: absolute;
+  z-index: 2;
+}
+button.toggle.left {
+  left: 15px;
+}
+button.toggle.right {
+  right: 15px;
+}
 div.container .sm {
   height: 40px;
   justify-content: center;

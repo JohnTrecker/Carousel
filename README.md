@@ -10,6 +10,7 @@ Clone down the repository in the command line and open index.html:
 
 ```shell
 git clone https://github.com/JohnTrecker/Carousel.git
+cd Carousel
 open index.html
 ```
 

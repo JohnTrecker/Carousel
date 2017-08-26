@@ -6,16 +6,19 @@
 </head>
 <body>
 
-  <button id="toggleLeft" style="left:10%" onclick="toggleImage('left')">◀</button>
   <div class="container">
 
-    <div class="header sm">Carousel Example</div>
-    <div id="viewport"></div>
+    <div class="header sm">Carousel Example
+      <button id="toggleAuto" onclick="toggleAuto()">Toggle Auto</button>
+    </div>
+    <div id="viewport">
+      <button class="toggle left" onclick="toggleImage('left')">◀</button>
+      <button class="toggle right" onclick="toggleImage('right')">▶</button>
+    </div>
     <div class="title sm">OVERVIEW OF TIME APPROVAL 1</div>
     <div class="number sm"></div>
 
   </div>
-  <button id="toggleRight" onclick="toggleImage('right')">▶</button>
 
   <script type="text/javascript" src="main.js"></script>
 </body>

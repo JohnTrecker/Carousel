@@ -24,12 +24,22 @@ slides.forEach((val) => {
 
 // slide state management
 const position =  [...Array(slideNumber).keys()].map((val) => val*-100 + '%')
+let auto = false
+let refID = null
 let toggle = 0
 
+const toggleAuto = () => {
+  auto = !auto
+  if (auto) refID = setInterval(toggleImage, 5000)
+  else clearInterval(refID)
+}
+
 // define toggle function
-const toggleImage = (direction) => {
-  if (toggle === slideNumber-1 && direction === 'right') toggle = 0
-  else if (toggle === 0 && direction === 'left') toggle = slideNumber-1
+const toggleImage = (direction = 'right') => {
+  if (toggle === slideNumber-1 && direction === 'right') {
+    if (auto) toggleAuto()
+  }
+  else if (toggle === 0 && direction === 'left') return
   else toggle = direction === 'right' ? (toggle+1) : (toggle-1)
 
   let images = document.getElementsByClassName('image');
@@ -43,3 +53,5 @@ const toggleImage = (direction) => {
   if (active) active.classList.remove('active')
   current.classList.add('active')
 }
+
+
