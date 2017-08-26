@@ -98,13 +98,27 @@ button.toggle.left {
   left: 15px;
 }
 button.toggle.right {
-  right: 15   px;
+  right: 15px;
 }
 div.container .sm {
   height: 40px;
   justify-content: center;
   align-items: center;
 }
+
+div.header.sm {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+}
+
+button.toggleAuto {
+  position: absolute;
+  right: 15px;
+}
+
 div.number {
   flex-direction: row;
 }
