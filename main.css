@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 
-   This is a standard CSS reset for homogeneous views across browsers
+   This is a standard CSS reset for consistent views across browsers
 */
 
 html, body, div, span, applet, object, iframe,
@@ -50,10 +50,73 @@ table {
 }
 
 /*
-   My styling
+   Carousel specific styling
 */
-
-body {
-  width: 100%;
+html {
   height: 100%;
+}
+body {
+  min-height: 100%;
+  background-color: slategrey;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  border: 1px solid black;
+}
+
+div.container {
+  top: 50%;
+  width: 640px;
+  height: 520px;
+  background-color: white;
+}
+div#viewport {
+  height: 400px;
+  width: inherit;
+
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  /*min-width: 100%;*/
+}
+
+div.container .sm {
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+div.number {
+  flex-direction: row;
+}
+div.circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: yellow;
+  margin: 2px;
+
+  justify-content: center;
+  align-items: center;
+}
+div.circle.active {
+  background-color: red;
+}
+img {
+  /*display: inline-block;*/
+  /*border: 1px solid black;*/
+  margin: 0 auto;
+
+  position: relative;
+  left: 0%;
+  transition:left 200ms ease;
 }
