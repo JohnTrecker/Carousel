@@ -92,18 +92,13 @@ div#viewport {
 }
 button.toggle {
   position: absolute;
-  /*top: ;*/
+  top: 50%;
   z-index: 2;
   width: 0;
   height: 0;
   border-style: solid;
   background-color: transparent;
   outline: none;
-/*  border-top: 50px solid transparent;
-  border-right: 100px solid red;
-  border-bottom: 50px solid transparent;
-*/
-
 }
 button.toggle.left {
   border-width: 11.5px 19.9px 11.5px 0;
