@@ -86,12 +86,8 @@ div#viewport {
   display: flex;
   flex-direction: row;
   align-content: center;
-  align-items: center;
   overflow: hidden;
   box-sizing: border-box;
-}
-div.image {
-  margin: 0 auto;
 }
 
 button.toggle {
@@ -114,12 +110,16 @@ button.toggle.right {
   border-color: transparent transparent transparent #007bff;
   right: 15px;
 }
+button.toggleAuto {
+  position: absolute;
+  right: 15px;
+}
+
 div.container .sm {
   height: 40px;
   justify-content: center;
   align-items: center;
 }
-
 div.header.sm {
   position: relative;
   display: flex;
@@ -127,12 +127,6 @@ div.header.sm {
   align-content: center;
   align-items: center;
 }
-
-button.toggleAuto {
-  position: absolute;
-  right: 15px;
-}
-
 div.number {
   flex-direction: row;
 }
@@ -150,10 +144,7 @@ div.circle.active {
   background-color: red;
 }
 img {
-  /*display: inline-block;*/
-  /*border: 1px solid black;*/
   margin: 0 auto;
-
   position: relative;
   left: 0%;
   transition:left 200ms ease;

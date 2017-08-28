@@ -42,8 +42,8 @@ const toggleImage = (direction = 'right') => {
   else if (toggle === 0 && direction === 'left') return
   else toggle = direction === 'right' ? (toggle+1) : (toggle-1)
 
-  let nodes = document.getElementsByClassName('image');
-  Array.prototype.forEach.call( nodes, el => {
+  let slides = document.getElementsByClassName('image');
+  Array.prototype.forEach.call( slides, el => {
     el.style.left = position[toggle]
   })
 
