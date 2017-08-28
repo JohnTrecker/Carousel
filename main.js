@@ -5,10 +5,10 @@ const slideNumber = 5;
 const slides = [...Array(slideNumber + 1).keys()].slice(1) // [1,2,3,4,5]
 
 // mount slides and circles to viewport
-const viewport = document.getElementById('viewport')
-const bottombar = document.getElementsByClassName('number')[0]
+var viewport = document.getElementById('viewport');
+let bottombar = document.getElementsByClassName('number')[0]
 
-slides.forEach((val) => {
+const loadSlides = () => slides.forEach((val) => {
   let image = document.createElement('img')
   let circle = document.createElement('div')
 
@@ -21,6 +21,8 @@ slides.forEach((val) => {
   circle.innerHTML = val
   bottombar.appendChild(circle)
 })
+
+// document.onload(loadSlides())
 
 // slide state management
 const position =  [...Array(slideNumber).keys()].map((val) => val*-100 + '%')
