@@ -90,6 +90,10 @@ div#viewport {
   overflow: hidden;
   box-sizing: border-box;
 }
+div.image {
+  margin: 0 auto;
+}
+
 button.toggle {
   position: absolute;
   top: 50%;

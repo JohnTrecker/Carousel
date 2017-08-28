@@ -42,8 +42,8 @@ const toggleImage = (direction = 'right') => {
   else if (toggle === 0 && direction === 'left') return
   else toggle = direction === 'right' ? (toggle+1) : (toggle-1)
 
-  let images = document.getElementsByClassName('image');
-  [...images].forEach((el) => {
+  let nodes = document.getElementsByClassName('image');
+  Array.prototype.forEach.call( nodes, el => {
     el.style.left = position[toggle]
   })
 
@@ -54,4 +54,4 @@ const toggleImage = (direction = 'right') => {
   current.classList.add('active')
 }
 
-
+document.addEventListener('DOMContentLoaded', loadSlides)
