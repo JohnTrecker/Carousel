@@ -22,8 +22,6 @@ const loadSlides = () => slides.forEach((val) => {
   bottombar.appendChild(circle)
 })
 
-// document.onload(loadSlides())
-
 // slide state management
 const position =  [...Array(slideNumber).keys()].map((val) => val*-100 + '%')
 let auto = false

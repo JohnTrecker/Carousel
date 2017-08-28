@@ -92,12 +92,27 @@ div#viewport {
 }
 button.toggle {
   position: absolute;
+  /*top: ;*/
   z-index: 2;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  background-color: transparent;
+  outline: none;
+/*  border-top: 50px solid transparent;
+  border-right: 100px solid red;
+  border-bottom: 50px solid transparent;
+*/
+
 }
 button.toggle.left {
+  border-width: 11.5px 19.9px 11.5px 0;
+  border-color: transparent #007bff transparent transparent;
   left: 15px;
 }
 button.toggle.right {
+  border-width: 11.5px 0 11.5px 19.9px;
+  border-color: transparent transparent transparent #007bff;
   right: 15px;
 }
 div.container .sm {
