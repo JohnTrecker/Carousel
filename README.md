@@ -6,7 +6,9 @@
 
 ## Installing / Getting started
 
-Clone down the repository in the command line and open index.html:
+http://carousel.now.sh
+
+Or clone down the repository in the command line and open index.html:
 
 ```shell
 git clone https://github.com/JohnTrecker/Carousel.git
